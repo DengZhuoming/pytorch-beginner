@@ -52,7 +52,7 @@ for epoch in range(num_epochs):
 
     if (epoch+1) % 20 == 0:
         print('Epoch[{}/{}], loss: {:.6f}'
-              .format(epoch+1, num_epochs, loss.data[0]))
+              .format(epoch+1, num_epochs, loss.item())) #change loss[0] to loss.item() after test new version
 
 model.eval()
 predict = model(Variable(x_train))
